@@ -6,6 +6,12 @@
 /* Button Customization */
 button {
     --accentcolor: var(--accent-alt);
+    transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+button:hover {
+    background-color: rgba(var(--accent), 0.2);
+    transform: scale(1.05);
 }
 
 /* Root Variables */
@@ -76,6 +82,10 @@ div[class*="userProfile"][class*="unThemed"].theme-light {
     border-radius: 8px !important;
     border: 3px solid transparent !important;
     background-color: rgba(var(--accent-alt), 1) !important;
+    transition: background-color 0.3s ease;
+}
+::-webkit-scrollbar-thumb:hover {
+    background-color: rgba(var(--accent-alt), 0.8) !important;
 }
 ::-webkit-scrollbar-track {
     visibility: visible !important;
@@ -93,6 +103,7 @@ div[class*="typeWindows-"] {
     --background-modifier-hover: rgba(var(--dm-white), 0.05);
     --background-modifier-active: rgba(var(--dm-white), 0.075);
     height: 26px;
+    transition: background 0.3s ease;
 }
 div[class*="typeWindows-"] > div:first-child {
     display: none;
@@ -115,6 +126,7 @@ div[class*="typeWindows-"]::after {
     height: 30px;
     background: rgba(var(--md-black), 0.85);
     z-index: -1;
+    transition: background 0.3s ease;
 }
 
 /* Guilds */
@@ -128,6 +140,7 @@ ul[data-list-id='guildsnav'] {
     background-color: rgba(var(--md-black), 0.6);
     border-right: 1px solid rgba(var(--md-black), 0.2);
     box-shadow: inset -10px 0px 20px -10px rgba(var(--md-black), 0.3);
+    transition: background-color 0.3s ease;
 }
 ul[data-list-id='guildsnav']::-webkit-scrollbar {
     display: none;
@@ -138,6 +151,7 @@ ul[data-list-id='guildsnav'] > div[dir] {
 ul[data-list-id='guildsnav'] [class^="pill-"],
 ul[data-list-id='guildsnav'] [class^="pill-"] > div {
     height: 40px !important;
+    transition: background-color 0.3s ease;
 }
 ul[data-list-id='guildsnav'] div[style*="height: 56"],
 ul[id^="folder-items-"] {
@@ -147,6 +161,7 @@ ul[data-list-id='guildsnav'] [class^="pill-"] span {
     width: 10px;
     margin-left: -5px;
     border-radius: 20px;
+    transition: background-color 0.3s ease;
 }
 [data-list-id='guildsnav'] [class^="pill-"] span[style^="opacity: 1; height: 40"] {
     --header-primary: rgba(var(--accent), 1);
@@ -162,9 +177,14 @@ span[class^="expandedFolderBackground-"] {
 [data-list-id='guildsnav'] svg[width="48"] {
     width: 40px;
     height: 40px;
+    transition: transform 0.3s ease;
+}
+[data-list-id='guildsnav'] svg[width="48"]:hover {
+    transform: scale(1.1);
 }
 div[data-list-item-id="guildsnav___home"] {
     background: var(--home-image) top center/110% no-repeat;
+    transition: background-image 0.3s ease;
 }
 div[class^="unreadMentionsIndicatorBottom-"] {
     bottom: 70px;
@@ -175,7 +195,7 @@ div[class^="unreadMentionsIndicatorBottom-"] {
 }
 div[data-list-item-id="guildsnav___create-join-button"],
 div[data-list-item-id="guildsnav___guild-discover-button"] {
-    transition: 150ms ease;
+    transition: opacity 0.3s ease, background-color 0.3s ease, color 0.3s ease, border-color 0.3s ease;
     opacity: 0.5;
     background-color: var(--background-solid) !important;
     color: rgba(var(--dm-white), 0.3) !important;
